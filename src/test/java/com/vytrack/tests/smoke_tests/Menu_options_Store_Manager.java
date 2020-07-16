@@ -23,15 +23,16 @@ public class Menu_options_Store_Manager extends TestBase {
                 ConfigurationReader.getProperty("password"));
 
         //TODO step 2. navigate to Dashboard-->Dashboards
-        dashboardPage.changeMenu("Dashboards","Dashboard");
-        //verify the title
+        dashboardPage.changeMenu("Dashboards", "Dashboard");
+        //verify title
         String expectedTitle = "Dashboard - Dashboards";
         wait.until(ExpectedConditions.titleIs(expectedTitle));
-        assertEquals(driver.getTitle(),expectedTitle);
+        assertEquals(driver.getTitle(), expectedTitle);
 
         //verify page name
         String expectedPageName = "Dashboard";
         assertEquals(dashboardPage.pageHeader.getText(), expectedPageName);
+
 
         //TODO step 3 Navigate to Fleet-->Vehicles
         //STEP - 3

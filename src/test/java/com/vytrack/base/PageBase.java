@@ -8,6 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.List;
+
 abstract public class PageBase {
   public  PageBase(){
       PageFactory.initElements(Driver.getDriver(),this);
@@ -24,6 +26,17 @@ abstract public class PageBase {
 
     @FindBy(xpath = "//a[@href='/user/logout']")
     public WebElement logOut;
+
+  @FindBy(xpath = "//span[contains(text(), 'Fleet')][@class='title title-level-1']")
+  public WebElement fleet;
+
+  @FindBy(xpath = "//span[.='Vehicles'][@class='title title-level-2']")
+  public WebElement vehicles;
+
+
+  @FindBy(css = ".title-level-1")
+  public List<WebElement> menu1Options;
+
 
   public void changeMenu(String menu1, String menu2) {
     String menu1X = "//span[contains(text(), '"+menu1+"')][@class='title title-level-1']";
@@ -45,7 +58,5 @@ abstract public class PageBase {
     wait.until(ExpectedConditions.elementToBeClickable(menu2El));
     menu2El.click();
   }
-
-
 
 }
