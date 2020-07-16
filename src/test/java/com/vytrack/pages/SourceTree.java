@@ -10,5 +10,7 @@ public class SourceTree {
     public void methodFromLocal(){
         System.out.println("Another try from local");
         System.out.println("again");
+        System.out.println("again222");
+        
     }
 }
