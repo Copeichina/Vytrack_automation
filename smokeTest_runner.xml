@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Vytrack Automation suite">
+<test name="Vytrack automation tests QA1">
+    <parameter name="url" value="https://qa1.vytrack.com/"></parameter>
+   <packages>
+       <package name="com.vytrack.tests.smoke_tests"></package>
+          </packages>
+</test>
+
+</suite>
